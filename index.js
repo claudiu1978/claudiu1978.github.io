@@ -15,3 +15,20 @@ var mottoElement = document.getElementById("motto");
 console.info(mottoElement);
 console.warn(mottoElement.innerHTML);
 mottoElement.innerHTML += " & " + jobTitle;
+
+function showHomePage() {
+  document.getElementById("home").style.display = "block";
+}
+function showSkillsPage() {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("skills").style.display = "block";
+}
+function showProjectsPage() {
+  document.getElementById("skills").style.display = "none";
+  document.getElementById("projects").style.display = "block";
+}
+function showLanguagesPage() {
+  document.getElementById("projects").style.display = "none";
+  document.getElementById("languages").style.display = "block";
+}
+showHomePage();
