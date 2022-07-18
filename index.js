@@ -24,6 +24,7 @@ function showHomePage() {
 }
 
 function showSkillsPage() {
+  console.debug("show skills");
   document.getElementById("skills").style.display = "block";
   document.getElementById("home").style.display = "none";
   document.getElementById("projects").style.display = "none";
