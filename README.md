@@ -2,7 +2,7 @@
 
 My personal Resume
 
-this is my C.V with htm and css
+This is my C.V. with html and css
 
 ## live
 
