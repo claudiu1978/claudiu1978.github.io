@@ -30,21 +30,10 @@ function hideAllPages() {
   hide("languages");
   hide("home");
 }
-function showHomePage() {
-  hideAllPages();
-  show("home");
-}
 
-function showSkillsPage() {
+function showPage(id) {
+  console.warn("pls show me this page", id);
   hideAllPages();
-  show("skills");
+  show(id);
 }
-function showProjectsPage() {
-  hideAllPages();
-  show("projects");
-}
-function showLanguagesPage() {
-  hideAllPages();
-  show("languages");
-}
-showHomePage();
+showPage("home");
