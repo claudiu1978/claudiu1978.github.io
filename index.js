@@ -24,16 +24,27 @@ function show(id) {
   document.getElementById(id).style.display = "block";
   // console.warn("show", id);
 }
-function hideAllPages() {
-  hide("skills");
-  hide("projects");
-  hide("languages");
-  hide("home");
+
+var activePage = "home";
+function showPage(nextPage) {
+  console.warn("change", activePage, "to", nextPage);
+  hide(activePage);
+  show(nextPage);
+  document.getElementById("menu-" + activePage).classList.remove("active");
+  document.getElementById("menu-" + nextPage).classList.add("active");
+  activePage = nextPage;
+}
+function initEvents(e) {
+  document
+    .getElementById("top-menu-bar")
+    .addEventListener("click", function (e) {
+      if (e.target.matches("a")) {
+        var id = e.target.id.substring(5);
+        console.warn("click pe menu", id, e.target.matches("a"));
+        showPage(id);
+      }
+    });
 }
 
-function showPage(id) {
-  console.warn("pls show me this page", id);
-  hideAllPages();
-  show(id);
-}
-showPage("home");
+showPage(activePage);
+initEvents();

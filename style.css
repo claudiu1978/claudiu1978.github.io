@@ -38,6 +38,7 @@ header {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
 }
+
 #side-menu > section h2 {
   margin: 0 0 10px 0;
   color: #334455;
@@ -107,8 +108,7 @@ li {
 }
 #top-menu-bar a:hover,
 #top-menu-bar a.active {
-  /* color: #334455; */
-  background-color: lightblue;
+  background-color: #ff0;
 }
 
 .page {
@@ -156,8 +156,12 @@ li {
   border-radius: 50%;
 }
 footer {
-  min-height: 20px;
+  max-height: 5px;
   padding: 10px;
   display: block;
   text-align: center;
+}
+#actions {
+  align-content: center;
+  color: aqua;
 }
