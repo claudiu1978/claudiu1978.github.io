@@ -56,13 +56,29 @@ function displaySkills() {
   console.info("displaySkills");
   for (var i = 1; i < 3; i++) {
     console.info(`${i}*5=${i * 5}`);
-    // i = i + 1;
+    i = i + 1;
   }
   var ul = document.querySelector("#skills ul");
-  var skills = ["html", "css", "js"];
-  console.info(skills);
+
+  var skills = [
+    { name: "html", endorcements: 15, favorite: true },
+    { name: "css", endorcements: 5, favorite: true },
+
+    { name: "js", endorcements: 10, favorite: false },
+  ];
+  skills.sort(function (a, b) {
+    return a.endorcements - b.endorcements;
+    // if (a.name.toLowerCase() < b.name.toLowerCase()) {
+    //   return -1;
+    // }
+    // if (a.name.toLowerCase() > b.name.toLowerCase()) {
+    //   return 1;
+    // }
+    // return 0;
+  });
   for (var i = 0; i < skills.length; i++) {
-    ul.innerHTML += `<li>${skills[i]}</li>`;
+    ul.innerHTML += `<li>${skills[i].name}-${skills[i].endorcements}</li>`;
   }
 }
+
 displaySkills();
