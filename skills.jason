@@ -1,6 +1,0 @@
- [
-    { name: "html", endorcements: 16, favorite: true },
-    { name: "css", endorcements: 5, favorite: true },
-
-    { name: "js", endorcements: 6, favorite: false },
-  ]

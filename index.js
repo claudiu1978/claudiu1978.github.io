@@ -82,12 +82,13 @@ function displaySkills(skills) {
 }
 
 function loadSkills() {
-  fetch("skills.jason")
+  fetch("skills.json")
     .then(function (response) {
-      return response.jason();
+      return response.json();
     })
-    .then(function (result) {});
-  console.warn("am primit ceva sau nu", skills);
-  displaySkills(skills);
+    .then(function (skills) {
+      console.warn("am primit ceva sau nu", skills);
+      displaySkills(skills);
+    });
 }
 loadSkills();
