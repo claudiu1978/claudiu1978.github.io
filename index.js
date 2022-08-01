@@ -52,7 +52,7 @@ function initEvents() {
 showPage(activePage);
 initEvents();
 // initializare; conditie ; post exec
-function displaySkills() {
+function displaySkills(skills) {
   console.info("displaySkills");
   for (var i = 1; i < 3; i++) {
     console.info(`${i}*5=${i * 5}`);
@@ -81,4 +81,13 @@ function displaySkills() {
   }
 }
 
-displaySkills();
+function loadSkills() {
+  fetch("skills.jason")
+    .then(function (response) {
+      return response.jason();
+    })
+    .then(function (result) {});
+  console.warn("am primit ceva sau nu", skills);
+  displaySkills(skills);
+}
+loadSkills();
