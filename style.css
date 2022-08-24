@@ -108,7 +108,7 @@ li {
 }
 #top-menu-bar a:hover,
 #top-menu-bar a.active {
-  background-color: #ff0;
+  background-color: lightgray;
 }
 
 .page {
