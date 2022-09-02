@@ -1,20 +1,20 @@
-console.info(2);
-console.debug(2 + 3);
-console.warn(6 * 3 - 10);
-// console.error("started");
-// var myName = "Claudiu";
-// var age = "30";
+// console.info(2);
+// console.debug(2 + 3);
+// console.warn(6 * 3 - 10);
+// // console.error("started");
+// // var myName = "Claudiu";
+// // var age = "30";
 
-// console.info("My name is " + myName + " I'am " + age + "years old");
-// age = 30;
-// console.info("My name is " + myName + " I'am " + age + "years old");
-// age = 31;
-// console.info("My name is " + myName + " I'am " + age + "years old");
-var jobTitle = " Cursant web developer";
-var mottoElement = document.getElementById("motto");
-console.info(mottoElement);
-console.warn(mottoElement.innerHTML);
-// mottoElement.innerHTML += " & " + jobTitle;
+// // console.info("My name is " + myName + " I'am " + age + "years old");
+// // age = 30;
+// // console.info("My name is " + myName + " I'am " + age + "years old");
+// // age = 31;
+// // console.info("My name is " + myName + " I'am " + age + "years old");
+// var jobTitle = " Cursant web developer";
+// var mottoElement = document.getElementById("motto");
+// console.info(mottoElement);
+// console.warn(mottoElement.innerHTML);
+// // mottoElement.innerHTML += " & " + jobTitle;
 
 function hide(id) {
   // console.info("hide", id);
@@ -60,12 +60,6 @@ function displaySkills(skills) {
   }
   var ul = document.querySelector("#skills ul");
 
-  var skills = [
-    { name: "html", endorcements: 15, favorite: true },
-    { name: "css", endorcements: 5, favorite: true },
-
-    { name: "js", endorcements: 10, favorite: false },
-  ];
   skills.sort(function (a, b) {
     return a.endorcements - b.endorcements;
     // if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -87,8 +81,8 @@ function loadSkills() {
       return response.json();
     })
     .then(function (serverSkills) {
-      console.warn(serverSkills);
-      1 + displaySkills(serverSkills);
+      // console.warn(serverSkills);
+      displaySkills(serverSkills);
     });
 }
 loadSkills();
